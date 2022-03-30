@@ -9,13 +9,19 @@ import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 public class TaskExecutorConfiguration {
 
     private static final Integer NUMBER_OF_THREADS= 4;
+    private static final Integer NUMBER_OF_CORE_MAX = 8;
 
-    @Bean(name = "taskExecutor")
-    public TaskExecutor taskExecutor(){
-        ThreadPoolTaskExecutor threadPoolExecutor = new ThreadPoolTaskExecutor();
-        threadPoolExecutor.setCorePoolSize(NUMBER_OF_THREADS);
-        threadPoolExecutor.setQueueCapacity(NUMBER_OF_THREADS);
-        threadPoolExecutor.setMaxPoolSize(NUMBER_OF_THREADS);
-        return threadPoolExecutor;
+    @Bean(name = "myTaskExecutor")
+    public TaskExecutor threadPoolTaskExecutor(){
+        System.out.println("pool inicializado");
+        ThreadPoolTaskExecutor taskExecutor = new ThreadPoolTaskExecutor();
+        taskExecutor.setMaxPoolSize(NUMBER_OF_CORE_MAX);
+        taskExecutor.setCorePoolSize(NUMBER_OF_THREADS);
+        taskExecutor.setQueueCapacity(NUMBER_OF_CORE_MAX);
+        taskExecutor.setThreadNamePrefix("ProcessJob-");
+        taskExecutor.afterPropertiesSet();
+        taskExecutor.initialize();
+
+        return taskExecutor;
     }
 }
