@@ -16,7 +16,6 @@ import java.text.MessageFormat;
 @Slf4j
 @RequiredArgsConstructor
 public class ScheduleConfiguration extends QuartzJobBean {
-
     private final Job job;
     private final JobExplorer jobExplorer;
     private final JobLauncher jobLauncher;

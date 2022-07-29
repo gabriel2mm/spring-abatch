@@ -21,7 +21,7 @@ public class StepReaderFile {
     private boolean batchJobState = false;
     private final StepBuilderFactory stepBuilderFactory;
 
-    @Bean
+    @Bean(name="simpleStepReaderFile")
     public Step simpleStepReaderFile(
             @Qualifier("myTaskExecutor") TaskExecutor taskExecutor,
             @Qualifier("myFileReader") FlatFileItemReader<Client> flatFileItemReader,

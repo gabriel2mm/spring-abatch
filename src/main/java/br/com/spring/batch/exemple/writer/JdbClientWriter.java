@@ -31,8 +31,8 @@ public class JdbClientWriter {
                 preparedStatement.setString(1, client.getName());
                 preparedStatement.setString(2, client.getEmail());
                 preparedStatement.setDate(3, new java.sql.Date(client.getBirthDate().getTime()));
-                preparedStatement.setInt(4, client.getIdade());
-                preparedStatement.setInt(5, client.getId());
+                preparedStatement.setInt(4, client.getAge());
+                preparedStatement.setLong(5, client.getId());
             }
         };
     }

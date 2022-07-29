@@ -2,22 +2,29 @@ package br.com.spring.batch.exemple.domain;
 
 import lombok.*;
 
+import javax.persistence.*;
 import java.util.Date;
 
-@ToString
 @Getter @Setter
 @NoArgsConstructor
 @AllArgsConstructor
+@Entity
+@Table(name = "CLIENTE")
 public class Client {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    public Long id;
+
+    @Column(name = "nome")
     private String name;
 
     private String email;
 
+    @Temporal(TemporalType.TIMESTAMP)
+    @Column(name = "data_nascimento")
     private Date birthDate;
 
-    private int idade;
-
-    private int id;
-
+    @Column(name = "idade")
+    private int age;
 }

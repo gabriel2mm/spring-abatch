@@ -15,7 +15,6 @@ import javax.sql.DataSource;
 @Configuration
 public class DatasourceConfiguration {
 
-    private static final String PREFIX_APP_DATASOURCE = "app.datasource";
     private static final String PREFIX_SPRING_BATCH_DATASOURCE = "spring.datasource";
 
     @Bean
@@ -23,22 +22,5 @@ public class DatasourceConfiguration {
     @ConfigurationProperties(prefix = PREFIX_SPRING_BATCH_DATASOURCE)
     public DataSource springDataSource(){
         return DataSourceBuilder.create().build();
-    }
-
-    @Bean(name = "appDatasource")
-    @ConfigurationProperties(prefix = PREFIX_APP_DATASOURCE)
-    public DataSource appDataSource(){
-        return DataSourceBuilder.create().build();
-    }
-
-    @Bean
-    public DataSourceInitializer dataSourceInitializer(@Qualifier("appDatasource") DataSource datasource){
-        ResourceDatabasePopulator resourceDatabasePopulator = new ResourceDatabasePopulator();
-        resourceDatabasePopulator.addScript(new ClassPathResource("data-2.sql"));
-
-        DataSourceInitializer dataSourceInitializer = new DataSourceInitializer();
-        dataSourceInitializer.setDataSource(datasource);
-        dataSourceInitializer.setDatabasePopulator(resourceDatabasePopulator);
-        return dataSourceInitializer;
     }
 }

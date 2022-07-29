@@ -6,22 +6,23 @@ import org.springframework.batch.core.Step;
 import org.springframework.batch.core.configuration.annotation.EnableBatchProcessing;
 import org.springframework.batch.core.configuration.annotation.JobBuilderFactory;
 import org.springframework.batch.core.launch.support.RunIdIncrementer;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
 @EnableBatchProcessing
 @RequiredArgsConstructor
-public class FileReaderJob {
+public class TesteRepositoryJob {
 
     private final JobBuilderFactory jobBuilderFactory;
 
-    @Bean(name = "myJob")
-    public Job simpleFleReaderJob(Step stepReaderFile){
-         return jobBuilderFactory
-                 .get("fileReaderJob")
-                 .start(stepReaderFile)
-                 .incrementer(new RunIdIncrementer())
-                 .build();
+    @Bean(name = "repositoryJob")
+    public Job repositoryJob(@Qualifier("repositoryStep") Step repositoryStep){
+        return jobBuilderFactory
+                .get("job-repository")
+                .incrementer(new RunIdIncrementer())
+                .start(repositoryStep)
+                .build();
     }
 }

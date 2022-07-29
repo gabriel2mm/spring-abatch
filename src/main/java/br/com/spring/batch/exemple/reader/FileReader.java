@@ -14,7 +14,7 @@ public class FileReader {
     @Bean(name="myFileReader")
     public FlatFileItemReader<Client> streamReader(){
         return new FlatFileItemReaderBuilder<Client>()
-                .resource(new PathResource("ms-spring-batch/src/main/resources/dados/pessoas.csv"))
+                .resource(new PathResource("src/main/resources/dados/pessoas.csv"))
                 .name("FilePessoaReader")
                 .delimited()
                 .names("nome", "email", "data_nascimento", "idade", "id")
