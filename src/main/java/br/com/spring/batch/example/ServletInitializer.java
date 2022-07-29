@@ -1,4 +1,4 @@
-package br.com.spring.batch.exemple;
+package br.com.spring.batch.example;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;

@@ -1,7 +1,7 @@
-package br.com.spring.batch.exemple.step;
+package br.com.spring.batch.example.step;
 
-import br.com.spring.batch.exemple.domain.Client;
-import br.com.spring.batch.exemple.writer.RepositoryItemWriter;
+import br.com.spring.batch.example.domain.Client;
+import br.com.spring.batch.example.writer.RepositoryItemWriter;
 import lombok.RequiredArgsConstructor;
 import org.springframework.batch.core.Step;
 import org.springframework.batch.core.configuration.annotation.StepBuilderFactory;

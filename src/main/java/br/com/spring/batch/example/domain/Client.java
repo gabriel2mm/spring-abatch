@@ -1,4 +1,4 @@
-package br.com.spring.batch.exemple.domain;
+package br.com.spring.batch.example.domain;
 
 import lombok.*;
 

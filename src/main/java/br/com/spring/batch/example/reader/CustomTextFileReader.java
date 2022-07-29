@@ -1,4 +1,4 @@
-package br.com.spring.batch.exemple.reader;
+package br.com.spring.batch.example.reader;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.batch.item.*;

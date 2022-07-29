@@ -1,4 +1,4 @@
-package br.com.spring.batch.exemple.configuration;
+package br.com.spring.batch.example.configuration;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

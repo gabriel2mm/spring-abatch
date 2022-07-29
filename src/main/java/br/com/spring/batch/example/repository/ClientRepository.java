@@ -1,6 +1,6 @@
-package br.com.spring.batch.exemple.repository;
+package br.com.spring.batch.example.repository;
 
-import br.com.spring.batch.exemple.domain.Client;
+import br.com.spring.batch.example.domain.Client;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

@@ -1,7 +1,7 @@
-package br.com.spring.batch.exemple.reader;
+package br.com.spring.batch.example.reader;
 
-import br.com.spring.batch.exemple.domain.Client;
-import br.com.spring.batch.exemple.mapper.ClientMapper;
+import br.com.spring.batch.example.domain.Client;
+import br.com.spring.batch.example.mapper.ClientMapper;
 import org.springframework.batch.item.file.FlatFileItemReader;
 import org.springframework.batch.item.file.builder.FlatFileItemReaderBuilder;
 import org.springframework.context.annotation.Bean;

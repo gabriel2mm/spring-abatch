@@ -1,4 +1,4 @@
-package br.com.spring.batch.exemple.configuration;
+package br.com.spring.batch.example.configuration;
 
 import org.quartz.*;
 import org.springframework.context.annotation.Bean;

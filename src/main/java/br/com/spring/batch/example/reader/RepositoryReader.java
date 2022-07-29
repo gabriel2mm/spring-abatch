@@ -1,11 +1,9 @@
-package br.com.spring.batch.exemple.reader;
+package br.com.spring.batch.example.reader;
 
-import br.com.spring.batch.exemple.domain.Client;
-import br.com.spring.batch.exemple.repository.ClientRepository;
+import br.com.spring.batch.example.domain.Client;
+import br.com.spring.batch.example.repository.ClientRepository;
 import lombok.RequiredArgsConstructor;
-import org.springframework.batch.core.configuration.annotation.JobScope;
 import org.springframework.batch.item.data.RepositoryItemReader;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Component;

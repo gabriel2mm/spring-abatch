@@ -1,6 +1,6 @@
-package br.com.spring.batch.exemple.writer;
+package br.com.spring.batch.example.writer;
 
-import br.com.spring.batch.exemple.domain.Client;
+import br.com.spring.batch.example.domain.Client;
 import org.springframework.batch.item.database.ItemPreparedStatementSetter;
 import org.springframework.batch.item.database.JdbcBatchItemWriter;
 import org.springframework.batch.item.database.builder.JdbcBatchItemWriterBuilder;

@@ -1,6 +1,6 @@
-package br.com.spring.batch.exemple.mapper;
+package br.com.spring.batch.example.mapper;
 
-import br.com.spring.batch.exemple.domain.Client;
+import br.com.spring.batch.example.domain.Client;
 import org.springframework.batch.item.file.mapping.FieldSetMapper;
 import org.springframework.batch.item.file.transform.FieldSet;
 import org.springframework.validation.BindException;
